@@ -51,7 +51,7 @@ def handle_message(event):
 
         line_bot_api.reply_message( # 主要回覆功能為此段
             event.reply_token,
-            sticker_message)
+            TextSendMessage(text=r))
 
         return
 
@@ -66,6 +66,9 @@ def handle_message(event):
     elif '訂位' in msg:
         r = '您想訂位，是嗎？'
 
+    line_bot_api.reply_message( # 主要回覆功能為此段
+                event.reply_token,
+                sticker_message)
 
 if __name__ == "__main__":
     app.run()
