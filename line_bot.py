@@ -43,12 +43,16 @@ def handle_message(event):
     msg = event.message.text
     r = "很抱歉，我不知道您說什麼"
 
-    if msg == 'hi':
-        r = 'hi'
-    elif msg == '你吃飯了嗎？':
+    if msg in ['hi', 'Hi']: # 用in搭配清單傳出True/False, 來納入不同書寫格式
+        r = '嗨！'
+    elif msg == '你吃飯了嗎':
         r = '還沒誒'
-    elif msg == '你今年幾歲？':
+    elif msg == '你今年幾歲':
         r = '這是秘密'
+    elif msg == '你是誰':
+        r = '我是機器人'
+    elif '訂位' in msg:
+        r = '您想訂位，是嗎？'
 
     line_bot_api.reply_message(
         event.reply_token,
