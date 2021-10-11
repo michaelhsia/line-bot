@@ -51,7 +51,7 @@ def handle_message(event):
 
         line_bot_api.reply_message( # 主要回覆功能為此段
             event.reply_token,
-            TextSendMessage(text=r))
+            sticker_message)
 
         return
 
@@ -68,7 +68,7 @@ def handle_message(event):
 
     line_bot_api.reply_message( # 主要回覆功能為此段
                 event.reply_token,
-                sticker_message)
+                TextSendMessage(text=r))
 
 if __name__ == "__main__":
     app.run()
