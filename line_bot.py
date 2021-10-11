@@ -45,9 +45,9 @@ def handle_message(event):
 
     if msg == 'hi':
         r = 'hi'
-    elif msg == '你吃飯了嗎？'
+    elif msg == '你吃飯了嗎？':
         r = '還沒誒'
-    elif msg == '你今年幾歲？'
+    elif msg == '你今年幾歲？':
         r = '這是秘密'
 
     line_bot_api.reply_message(
