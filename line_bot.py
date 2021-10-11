@@ -49,10 +49,10 @@ def handle_message(event):
         r = '還沒誒'
     elif msg == '你今年幾歲？'
         r = '這是秘密'
-        
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=s))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
